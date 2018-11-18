@@ -29,6 +29,7 @@
     "css-docs": "npm-run-all css-compile-docs css-prefix-docs css-minify-docs",
     "css-compile": "npm-run-all --parallel css-compile-*",
     "css-compile-main": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/bootstrap.scss dist/css/bootstrap.css && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/bootstrap-grid.scss dist/css/bootstrap-grid.css && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/bootstrap-reboot.scss dist/css/bootstrap-reboot.css && npm run css-copy",
+    "css-compile-rtl": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss-rtl/bootstrap-rtl.scss dist-rtl/css/bootstrap.css && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss-rtl/bootstrap-grid-rtl.scss dist-rtl/css/bootstrap-grid-rtl.css && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss-rtl/bootstrap-reboot-rtl.scss dist-rtl/css/bootstrap-reboot-rtl.css",
     "css-compile-docs": "cross-env-shell node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 site/docs/$npm_package_version_short/assets/scss/docs.scss site/docs/$npm_package_version_short/assets/css/docs.min.css",
     "css-lint": "npm-run-all --parallel css-lint-*",
     "css-lint-main": "stylelint --syntax scss \"scss/**/*.scss\"",
