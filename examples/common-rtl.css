@@ -1,6 +1,3 @@
-.rtl, [dir=rtl]{
-  direction: rtl !important;
-}
-.ltr, [dir=ltr]{
-  direction: ltr !important;
-}
+/*
+  TODO: Add a nice persian web font like vazir or iransans
+*/
