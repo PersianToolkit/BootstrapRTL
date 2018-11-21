@@ -380,3 +380,7 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+
+dist/css/**
+dist/js/**
+dist-rtl/css/**
