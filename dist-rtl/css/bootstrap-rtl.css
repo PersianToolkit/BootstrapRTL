@@ -1,18 +1,29 @@
-.btn-group > .btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) {
+.rtl:not(.ltr) .btn-group > .btn:not(:first-child),
+.rtl:not(.ltr) .btn-group > .btn-group:not(:first-child), [dir=rtl]:not([dir=ltr]) .btn-group > .btn:not(:first-child),
+[dir=rtl]:not([dir=ltr]) .btn-group > .btn-group:not(:first-child) {
   margin-right: -1px;
 }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn {
+.rtl:not(.ltr) .btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.rtl:not(.ltr) .btn-group > .btn-group:not(:last-child) > .btn, [dir=rtl]:not([dir=ltr]) .btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+[dir=rtl]:not([dir=ltr]) .btn-group > .btn-group:not(:last-child) > .btn {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.btn-group > .btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) > .btn {
+.rtl:not(.ltr) .btn-group > .btn:not(:first-child),
+.rtl:not(.ltr) .btn-group > .btn-group:not(:first-child) > .btn, [dir=rtl]:not([dir=ltr]) .btn-group > .btn:not(:first-child),
+[dir=rtl]:not([dir=ltr]) .btn-group > .btn-group:not(:first-child) > .btn {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+.rtl, [dir=rtl] {
+  direction: rtl !important;
+}
+
+.ltr, [dir=ltr] {
+  direction: ltr !important;
 }
 
 /*# sourceMappingURL=bootstrap-rtl.css.map */

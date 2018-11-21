@@ -68,10 +68,11 @@
 		"../../scss-rtl/mixins/_grid-framework.scss",
 		"../../scss-rtl/mixins/_grid.scss",
 		"../../scss-rtl/mixins/_float.scss",
-		"../../scss-rtl/_reboot.scss"
+		"../../scss-rtl/_reboot.scss",
+		"../../scss-rtl/_rtl.scss"
 	],
 	"sourcesContent": [
-		"@import \"functions\";\n@import \"variables\";\n@import \"mixins\";\n@import \"reboot\";\n",
+		"@import \"functions\";\n@import \"variables\";\n@import \"mixins\";\n@import \"reboot\";\n\n\n@import \"rtl\";\n",
 		"@import \"../scss/functions\";\n",
 		"// Bootstrap functions\n//\n// Utility mixins and functions for evaluating source code across our variables, maps, and mixins.\n\n// Ascending\n// Used to evaluate Sass maps like our grid breakpoints.\n@mixin _assert-ascending($map, $map-name) {\n  $prev-key: null;\n  $prev-num: null;\n  @each $key, $num in $map {\n    @if $prev-num == null or unit($num) == \"%\" {\n      // Do nothing\n    } @else if not comparable($prev-num, $num) {\n      @warn \"Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !\";\n    } @else if $prev-num >= $num {\n      @warn \"Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !\";\n    }\n    $prev-key: $key;\n    $prev-num: $num;\n  }\n}\n\n// Starts at zero\n// Another grid mixin that ensures the min-width of the lowest breakpoint starts at 0.\n@mixin _assert-starts-at-zero($map) {\n  $values: map-values($map);\n  $first-value: nth($values, 1);\n  @if $first-value != 0 {\n    @warn \"First breakpoint in `$grid-breakpoints` must start at 0, but starts at #{$first-value}.\";\n  }\n}\n\n// Replace `$search` with `$replace` in `$string`\n// Used on our SVG icon backgrounds for custom forms.\n//\n// @author Hugo Giraudel\n// @param {String} $string - Initial string\n// @param {String} $search - Substring to replace\n// @param {String} $replace ('') - New value\n// @return {String} - Updated string\n@function str-replace($string, $search, $replace: \"\") {\n  $index: str-index($string, $search);\n\n  @if $index {\n    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);\n  }\n\n  @return $string;\n}\n\n// Color contrast\n@function color-yiq($color, $dark: $yiq-text-dark, $light: $yiq-text-light) {\n  $r: red($color);\n  $g: green($color);\n  $b: blue($color);\n\n  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;\n\n  @if ($yiq >= $yiq-contrasted-threshold) {\n    @return $dark;\n  } @else {\n    @return $light;\n  }\n}\n\n// Retrieve color Sass maps\n@function color($key: \"blue\") {\n  @return map-get($colors, $key);\n}\n\n@function theme-color($key: \"primary\") {\n  @return map-get($theme-colors, $key);\n}\n\n@function gray($key: \"100\") {\n  @return map-get($grays, $key);\n}\n\n// Request a theme color level\n@function theme-color-level($color-name: \"primary\", $level: 0) {\n  $color: theme-color($color-name);\n  $color-base: if($level > 0, $black, $white);\n  $level: abs($level);\n\n  @return mix($color-base, $color, $level * $theme-color-interval);\n}\n",
 		"@import \"../scss/variables\";\n",
@@ -137,8 +138,9 @@
 		"",
 		"",
 		"",
-		""
+		"",
+		".rtl, [dir=rtl]{\n  direction: rtl !important;\n}\n.ltr, [dir=ltr]{\n  direction: ltr !important;\n}\n"
 	],
 	"names": [],
-	"mappings": ""
+	"mappings": "AmEAA,AAAA,IAAI,GAAE,AAAA,GAAC,CAAD,GAAC,AAAA,EAAQ;EACb,SAAS,EAAE,cAAc;CAC1B;;AACD,AAAA,IAAI,GAAE,AAAA,GAAC,CAAD,GAAC,AAAA,EAAQ;EACb,SAAS,EAAE,cAAc;CAC1B"
 }
