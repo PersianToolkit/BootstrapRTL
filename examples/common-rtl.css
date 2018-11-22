@@ -1,7 +1,4 @@
-/*
-  TODO: Add a nice persian web font like vazir or iransans
-*/
-@import url("Fonts/Vazir/vazir.css");
+@import url("../node_modules/vazir-font/dist/font-face.css");
 body{
   font-family: Vazir;
 }
