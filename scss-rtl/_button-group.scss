@@ -4,17 +4,28 @@
     > .btn:not(:first-child),
     > .btn-group:not(:first-child) {
       margin-right: -$btn-border-width;
+      margin-left:8px;
     }
 
     // Reset rounded corners
     > .btn:not(:last-child):not(.dropdown-toggle),
     > .btn-group:not(:last-child) > .btn {
       @include border-left-radius(0);
+      border-top-right-radius: $btn-border-radius-sm;
+      border-bottom-right-radius: $btn-border-radius-sm;
+
+
+
+
+
     }
 
     > .btn:not(:first-child),
     > .btn-group:not(:first-child) > .btn {
       @include border-right-radius(0);
+
+
+
     }
   }
 }
