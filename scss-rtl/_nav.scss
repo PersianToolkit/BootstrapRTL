@@ -1,0 +1,10 @@
+.rtl:not(.ltr), [dir=rtl]:not([dir=ltr]){
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+
+}
