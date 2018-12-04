@@ -4,8 +4,9 @@ body{
 .rtl:not(.ltr), [dir=rtl]:not([dir=ltr]){
 
   .sidebar {
-    display: block;
-    position: relative;
+
+    position: fixed;
     right:0px;
+    z-index: 0px;
   }
 }
