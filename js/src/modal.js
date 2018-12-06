@@ -127,8 +127,6 @@ class Modal {
 
     this._adjustDialog()
 
-    $(document.body).addClass(ClassName.OPEN)
-
     this._setEscapeEvent()
     this._setResizeEvent()
 
@@ -245,6 +243,7 @@ class Modal {
 
     this._element.style.display = 'block'
     this._element.removeAttribute('aria-hidden')
+    this._element.setAttribute('aria-modal', true)
     this._element.scrollTop = 0
 
     if (transition) {
@@ -316,6 +315,7 @@ class Modal {
   _hideModal() {
     this._element.style.display = 'none'
     this._element.setAttribute('aria-hidden', true)
+    this._element.removeAttribute('aria-modal')
     this._isTransitioning = false
     this._showBackdrop(() => {
       $(document.body).removeClass(ClassName.OPEN)
@@ -466,6 +466,8 @@ class Modal {
         .data('padding-right', actualPadding)
         .css('padding-right', `${parseFloat(calculatedPadding) + this._scrollbarWidth}px`)
     }
+
+    $(document.body).addClass(ClassName.OPEN)
   }
 
   _resetScrollbar() {
