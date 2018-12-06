@@ -45,3 +45,7 @@ docs/.jekyll-metadata
 # Folders to ignore
 node_modules
 js/coverage
+
+dist/css/**
+dist/js/**
+dist-rtl/css/**
