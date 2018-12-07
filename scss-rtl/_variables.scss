@@ -1,1 +1,3 @@
 @import "../scss/variables";
+$custom-select-background:          $custom-select-indicator no-repeat left $custom-select-padding-x center / $custom-select-bg-size !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
+
