@@ -1,11 +1,5 @@
 .rtl:not(.ltr), [dir=rtl]:not([dir=ltr]){
   .input-group {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap; // For form validation feedback
-    align-items: stretch;
-    width: 100%;
-
     > .form-control,
     > .form-control-plaintext,
     > .custom-select,
@@ -23,23 +17,18 @@
         margin-left: -$input-border-width;
       }
     }
-
-    // Bring the "active" form control to the top of surrounding elements
-    > .form-control:focus,
-    > .custom-select:focus,
-    > .custom-file .custom-file-input:focus ~ .custom-file-label {
-      z-index: 3;
-    }
-
-    // Bring the custom file input above the label
-    > .custom-file .custom-file-input:focus {
-      z-index: 4;
-    }
-
     > .form-control,
     > .custom-select {
-      &:not(:last-child) { @include border-left-radius(0); }
-      &:not(:first-child) { @include border-right-radius(0); }
+      &:not(:last-child) {
+        @include border-left-radius(0);
+        border-top-right-radius: $btn-border-radius-sm;
+        border-bottom-right-radius: $btn-border-radius-sm;
+      }
+      &:not(:first-child) {
+        @include border-right-radius(0);
+        border-top-left-radius: $btn-border-radius-sm;
+        border-bottom-left-radius: $btn-border-radius-sm;
+      }
     }
   }
   .input-group > .input-group-prepend > .btn,
@@ -59,5 +48,7 @@
   .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
   .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
     @include border-right-radius(0);
+    border-top-left-radius: $btn-border-radius-sm;
+    border-bottom-left-radius: $btn-border-radius-sm;
   }
 }

@@ -4,7 +4,6 @@
     display: block;
     min-height: ($font-size-base * $line-height-base);
     padding-right: $custom-control-gutter;
-    //TODO : find a way for effect of the orignal .scss bs file
     padding-left: 0px;
   }
   .custom-select {
@@ -19,49 +18,13 @@
     background: $custom-select-background;
     background-color: $custom-select-bg;
     border: $custom-select-border-width solid $custom-select-border-color;
-    @if $enable-rounded {
-      border-radius: $custom-select-border-radius;
-    } @else {
-      border-radius: 0;
+  }
+  .custom-control-label {
+    &::before {
+      right: -$custom-control-gutter;
     }
-    @include box-shadow($custom-select-box-shadow);
-    appearance: none;
-
-    &:focus {
-      border-color: $custom-select-focus-border-color;
-      outline: 0;
-      @if $enable-shadows {
-        box-shadow: $custom-select-box-shadow, $custom-select-focus-box-shadow;
-      } @else {
-        box-shadow: $custom-select-focus-box-shadow;
-      }
-
-      &::-ms-value {
-        // For visual consistency with other platforms/browsers,
-        // suppress the default white text on blue background highlight given to
-        // the selected option text when the (still closed) <select> receives focus
-        // in IE and (under certain conditions) Edge.
-        // See https://github.com/twbs/bootstrap/issues/19398.
-        color: $input-color;
-        background-color: $input-bg;
-      }
-    }
-
-    &[multiple],
-    &[size]:not([size="1"]) {
-      height: auto;
-      padding-right: $custom-select-padding-x;
-      background-image: none;
-    }
-
-    &:disabled {
-      color: $custom-select-disabled-color;
-      background-color: $custom-select-disabled-bg;
-    }
-
-    // Hides the default caret in IE11
-    &::-ms-expand {
-      opacity: 0;
+    &::after {
+      right: -$custom-control-gutter;
     }
   }
 }
