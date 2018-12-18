@@ -1,0 +1,11 @@
+body {
+  text-align: right;
+}
+
+.rtl:not(.ltr) .sidebar, [dir=rtl]:not([dir=ltr]) .sidebar {
+  position: fixed;
+  right: 0px;
+  z-index: 0px;
+}
+
+/*# sourceMappingURL=bootstrap-reboot-rtl.css.map */
