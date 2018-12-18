@@ -47,7 +47,7 @@
   var Selector = {
     DATA_TOGGLE_CARROT: '[data-toggle^="button"]',
     DATA_TOGGLE: '[data-toggle="buttons"]',
-    INPUT: 'input:not([type="hidden"])',
+    INPUT: 'input',
     ACTIVE: '.active',
     BUTTON: '.btn'
   };
