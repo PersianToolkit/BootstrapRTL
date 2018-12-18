@@ -2,6 +2,7 @@
 _gh_pages
 _site
 site/docs/**/dist/
+site/docs/**/*.map
 
 # Ignore ruby files
 .ruby-version
