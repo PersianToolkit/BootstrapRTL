@@ -403,7 +403,7 @@
   var Selector$1 = {
     DATA_TOGGLE_CARROT: '[data-toggle^="button"]',
     DATA_TOGGLE: '[data-toggle="buttons"]',
-    INPUT: 'input',
+    INPUT: 'input:not([type="hidden"])',
     ACTIVE: '.active',
     BUTTON: '.btn'
   };
@@ -4504,7 +4504,7 @@
 
       var isActive = $(parent).hasClass(ClassName$4.SHOW);
 
-      if (!isActive && (event.which !== ESCAPE_KEYCODE || event.which !== SPACE_KEYCODE) || isActive && (event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE)) {
+      if (!isActive || isActive && (event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE)) {
         if (event.which === ESCAPE_KEYCODE) {
           var toggle = parent.querySelector(Selector$4.DATA_TOGGLE);
           $(toggle).trigger('focus');
@@ -6586,7 +6586,8 @@
   var ClassName$a = {
     FADE: 'fade',
     HIDE: 'hide',
-    SHOW: 'show'
+    SHOW: 'show',
+    SHOWING: 'showing'
   };
   var DefaultType$7 = {
     animation: 'boolean',
@@ -6633,6 +6634,10 @@
       }
 
       var complete = function complete() {
+        _this._element.classList.remove(ClassName$a.SHOWING);
+
+        _this._element.classList.add(ClassName$a.SHOW);
+
         $(_this._element).trigger(Event$a.SHOWN);
 
         if (_this._config.autohide) {
@@ -6640,7 +6645,9 @@
         }
       };
 
-      this._element.classList.add(ClassName$a.SHOW);
+      this._element.classList.remove(ClassName$a.HIDE);
+
+      this._element.classList.add(ClassName$a.SHOWING);
 
       if (this._config.animation) {
         var transitionDuration = Util.getTransitionDurationFromElement(this._element);
@@ -6701,6 +6708,8 @@
       var _this4 = this;
 
       var complete = function complete() {
+        _this4._element.classList.add(ClassName$a.HIDE);
+
         $(_this4._element).trigger(Event$a.HIDDEN);
       };
 
