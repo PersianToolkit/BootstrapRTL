@@ -98,6 +98,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "feather-icons": "^4.9.0",
     "vazir-font": "^19.0.0"
   },
   "peerDependencies": {
