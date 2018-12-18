@@ -1,0 +1,9 @@
+.rtl, [dir=rtl] {
+  direction: rtl !important;
+}
+
+.ltr, [dir=ltr] {
+  direction: ltr !important;
+}
+
+/*# sourceMappingURL=bootstrap-grid-rtl.css.map */

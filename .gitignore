@@ -46,9 +46,4 @@ docs/.jekyll-metadata
 node_modules
 js/coverage
 
-dist/**
-dist/css/**
-dist/js/**
-js/dist/**
-dist-rtl/css/**
 
