@@ -21,10 +21,10 @@
   }
   .custom-control-label {
     &::before {
-      right: -$custom-control-gutter;
+      right: -($custom-control-gutter + $custom-control-indicator-size);
     }
     &::after {
-      right: -$custom-control-gutter;
+      right: -($custom-control-gutter + $custom-control-indicator-size);
     }
   }
 }
