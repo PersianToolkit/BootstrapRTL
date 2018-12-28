@@ -1,25 +1,9 @@
 .rtl:not(.ltr), [dir=rtl]:not([dir=ltr]){
 
   .navbar-brand {
-
-
-    display: inline-block;
-    padding-top: $navbar-brand-padding-y;
-    padding-bottom: $navbar-brand-padding-y;
-
-    font-size: $navbar-brand-font-size;
-    line-height: inherit;
-    white-space: nowrap;
-
-
-
-
-    @include hover-focus {
-      text-decoration: none;
-    }
+    margin-right: 0;
+    margin-left: $navbar-padding-x;
   }
-
-
   .navbar-nav {
     padding-right: 0;
   }
