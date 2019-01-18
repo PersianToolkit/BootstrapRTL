@@ -3,7 +3,7 @@
     position: relative;
     display: block;
     min-height: ($font-size-base * $line-height-base);
-    padding-right: $custom-control-gutter;
+    padding-right: $custom-control-gutter + $custom-control-indicator-size;
     padding-left: 0px;
   }
   .custom-select {
