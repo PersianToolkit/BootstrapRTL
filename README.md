@@ -2,22 +2,21 @@
   <a href="https://getbootstrap.com/">
     <img src="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg" alt="Bootstrap logo" width=72 height=72>
   </a>
-
-  <h3 align="center">Bootstrap</h3>
+  
+  <h3 align="center">Bootstrap-RTL</h3>
+  <h3 align="center">PersianToolkit</h3>
 
   <p align="center">
-    Sleek, intuitive, and powerful front-end framework for faster and easier web development.
+    an Extension for sleek, intuitive, and powerful front-end framework for faster and easier web development and having both rtl and ltr direction in your page.
     <br>
-    <a href="https://getbootstrap.com/docs/4.1/"><strong>Explore Bootstrap docs »</strong></a>
+    <a href="https://persiantoolkit.github.io/BootstrapRTL/"><strong>Explore Bootstrap-RTL docs »</strong></a>
     <br>
     <br>
-    <a href="https://github.com/twbs/bootstrap/issues/new?template=bug.md">Report bug</a>
+    <a href="https://github.com/PersianToolkit/BootstrapRTL/issues/new?template=bug.md">Report bug</a>
     ·
-    <a href="https://github.com/twbs/bootstrap/issues/new?template=feature.md&labels=feature">Request feature</a>
+    <a href="https://github.com/PersianToolkit/BootstrapRTL/issues/new?template=feature.md&labels=feature">Request feature</a>
     ·
     <a href="https://themes.getbootstrap.com/">Themes</a>
-    ·
-    <a href="https://blog.getbootstrap.com/">Blog</a>
   </p>
 </p>
 
@@ -41,12 +40,12 @@
 
 Several quick start options are available:
 
-- [Download the latest release.](https://github.com/twbs/bootstrap/archive/v4.1.3.zip)
-- Clone the repo: `git clone https://github.com/twbs/bootstrap.git`
-- Install with [npm](https://www.npmjs.com/): `npm install bootstrap`
-- Install with [yarn](https://yarnpkg.com/): `yarn add bootstrap@4.1.3`
-- Install with [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:4.1.3`
-- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
+- [Download the latest release.](https://github.com/PersianToolkit/BootstrapRTL/archive/v4.1.3.zip)
+- Clone the repo: `git clone https://github.com/PersianToolkit/BootstrapRTL.git`
+- Install with [npm](https://www.npmjs.com/): `npm install PersianToolkit`
+- Install with [yarn](https://yarnpkg.com/): `yarn add PersianToolkit@4.1.3`
+- Install with [Composer](https://getcomposer.org/): `composer require PersianToolkit/bootstrapRTL:4.1.3`
+- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package PersianToolkit` Sass: `Install-Package PersianToolkit.sass`
 
 Read the [Getting started page](https://getbootstrap.com/docs/4.1/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
@@ -76,29 +75,44 @@ Within the download you'll find the following directories and files, logically g
 
 ```text
 bootstrap/
-└── dist/
-    ├── css/
-    │   ├── bootstrap-grid.css
-    │   ├── bootstrap-grid.css.map
-    │   ├── bootstrap-grid.min.css
-    │   ├── bootstrap-grid.min.css.map
-    │   ├── bootstrap-reboot.css
-    │   ├── bootstrap-reboot.css.map
-    │   ├── bootstrap-reboot.min.css
-    │   ├── bootstrap-reboot.min.css.map
-    │   ├── bootstrap.css
-    │   ├── bootstrap.css.map
-    │   ├── bootstrap.min.css
-    │   └── bootstrap.min.css.map
-    └── js/
-        ├── bootstrap.bundle.js
-        ├── bootstrap.bundle.js.map
-        ├── bootstrap.bundle.min.js
-        ├── bootstrap.bundle.min.js.map
-        ├── bootstrap.js
-        ├── bootstrap.js.map
-        ├── bootstrap.min.js
-        └── bootstrap.min.js.map
+├── dist/
+│   ├── css/
+│   │   ├── bootstrap-grid.css
+│   │   ├── bootstrap-grid.css.map
+│   │   ├── bootstrap-grid.min.css
+│   │   ├── bootstrap-grid.min.css.map
+│   │   ├── bootstrap-reboot.css
+│   │   ├── bootstrap-reboot.css.map
+│   │   ├── bootstrap-reboot.min.css
+│   │   ├── bootstrap-reboot.min.css.map
+│   │   ├── bootstrap.css
+│   │   ├── bootstrap.css.map
+│   │   ├── bootstrap.min.css
+│   │   └── bootstrap.min.css.map
+│   └── js/
+│       ├── bootstrap.bundle.js
+│       ├── bootstrap.bundle.js.map
+│       ├── bootstrap.bundle.min.js
+│       ├── bootstrap.bundle.min.js.map
+│       ├── bootstrap.js
+│       ├── bootstrap.js.map
+│       ├── bootstrap.min.js
+│       └── bootstrap.min.js.map
+│       
+└── dist-rtl/  
+    └──css/
+       ├── bootstrap-grid-rtl.css
+       ├── bootstrap-grid-rtl.css.map
+       ├── bootstrap-grid-rtl.min.css
+       ├── bootstrap-grid-rtl.min.css.map
+       ├── bootstrap-reboot-rtl.css
+       ├── bootstrap-reboot-rtl.css.map
+       ├── bootstrap-reboot-rtl.min.css
+       ├── bootstrap-reboot-rtl.min.css.map
+       ├── bootstrap-rtl.css
+       ├── bootstrap-rtl.css.map
+       ├── bootstrap-rtl.min.css
+       └── bootstrap-rtl.min.css.map
 ```
 
 We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/debug/readability/source-maps) (`bootstrap.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`bootstrap.bundle.js` and minified `bootstrap.bundle.min.js`) include [Popper](https://popper.js.org/), but not [jQuery](https://jquery.com/).
@@ -106,7 +120,7 @@ We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified
 
 ## Bugs and feature requests
 
-Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/twbs/bootstrap/issues/new).
+Have a bug or a feature request? Please first read our latest [issue](https://github.com/PersianToolkit/BootstrapRTL/issues) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/PersianToolkit/BootstrapRTL/issues/new).
 
 
 ## Documentation
