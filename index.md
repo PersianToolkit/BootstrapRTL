@@ -1,37 +1,40 @@
-## Welcome to GitHub Pages
+## Welcome to our BootStrap RTL Version
 
-You can use the [editor on GitHub](https://github.com/PersianToolkit/BootstrapRTL/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+in this project we creat a Generalized version on bootstrap To add RTL functionality on it.<br>
+we dont change the bootstrap core and our final product is a css file witch you have to use with Original version of bootstrap .
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### how we use it?
+at first you should link original bootstrap in your page and then link our product after it.<br>
+now by adding rtl class and rtl directon to each element their childiren elements will be right align.<br>
+with this feature you can have both rtl and ltr element alignment in you page.
+```
+<link href="~/bootstrap.min.css" rel="stylesheet">
+<link href="‪~/bootstrap-rtl.css" rel="stylesheet">
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+<div class="rtl" dir="rtl" >
+  all this element's child will be right aligned.
+</div>
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+### what make our project better than others?
+1. support right align and left align in on page by user choose<br>
+2. original Bootstrop core dont change<br>
+3. our design make job easier to be update with original version
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/PersianToolkit/BootstrapRTL/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#### Examples are below
+ **bootstrap example at first:**:point_down:
+ <br> 
+ 
+ ![Image](http://uupload.ir/files/q5kt_orgine_blog.png)
+ 
+ **after use our product:**:point_down:
+ <br>
+ 
+  ![Image](http://uupload.ir/files/iare_orgine_blog.png)
+ 
+
+
+**_For more details and see our source code checkout our [GitHub](https://github.com/PersianToolkit/BootstrapRTL/)._**
