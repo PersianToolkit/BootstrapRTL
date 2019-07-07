@@ -103,7 +103,7 @@ Have a bug or a feature request? Please first read our latest [issue](https://gi
 
 ## Documentation
 
-Bootstrap's documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com/) and publicly hosted on GitHub Pages at <https://persiantoolkit.github.io/BootstrapRTL/>. The docs may also be run locally.
+BootstrapRTl's documentation, included in this repo in the root directory, publicly hosted on GitHub Pages at <https://persiantoolkit.github.io/BootstrapRTL/>. 
 
 ### Documentation for previous releases
 
